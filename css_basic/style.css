@@ -1,11 +1,14 @@
 body {
     display: flex;
     flex-direction: column;
+    color: white;
+    background-color: whitesmoke;
 }
 main {
     flex: auto;
     display: flex;
     flex-direction: row;
+    background-color: #f0f5;;
 }
 article {
     flex: 2;
