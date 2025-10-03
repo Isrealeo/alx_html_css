@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In Popup Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Style for the dialog */
+    dialog {
+      border: none;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 300px;
+      width: 100%;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Style the backdrop */
+    dialog::backdrop {
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    /* Form elements */
+    input {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+    }
+
+    button {
+      padding: 8px 12px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Trigger button -->
+  <button id="openSignIn">Sign In</button>
+
+  <!-- Sign In dialog -->
+  <dialog id="signInDialog">
+    <form method="dialog">
+      <h2>Sign In</h2>
+      <label>Email:</label>
+      <input type="email" required>
+      <label>Password:</label>
+      <input type="password" required>
+      
+      <menu>
+        <button value="cancel">Cancel</button>
+        <button id="confirmBtn" value="confirm">Sign In</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <script>
+    const dialog = document.getElementById("signInDialog");
+    const openBtn = document.getElementById("openSignIn");
+
+    // Open the dialog as a modal
+    openBtn.addEventListener("click", () => {
+      dialog.showModal();
+    });
+
+    // Handle dialog closing (example)
+    dialog.addEventListener("close", () => {
+      console.log("Dialog closed. Return value:", dialog.returnValue);
+    });
+  </script>
+
+</body>
+</html>

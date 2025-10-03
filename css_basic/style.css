@@ -1,10 +1,21 @@
+:root{
+    --main-color: #3498db;
+}
 body {
     display: flex;
     flex-direction: column;
     color: white;
-    background-color: whitesmoke;
-}
-main {
+    background-color: var(--main-color, );
+    background-image: linear-gradient(
+    90deg,
+    rgb(119 0 255 / 39%),
+    rgb(0 212 255 / 25%)
+  );
+
+    /*background-color: color-mix(in oklch, oklch(none 0.2 10), oklch(60% none 30))
+color-mix(in oklch, oklch(60% 0.2 10), oklch(60% 0.2 30))
+*/}
+main {    
     flex: auto;
     display: flex;
     flex-direction: row;
